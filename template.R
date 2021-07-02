@@ -8,7 +8,7 @@ G6F.data <- Read10X(data.dir = "/lustre/project/wdeng7/jyang10/data/sampleG6F/ou
 G6F <- CreateSeuratObject(counts = G6F.data, project = "G6F", min.cells = 3, min.features = 200)
 G6F
 # The [[ operator can add columns to object metadata. This is a great place to stash QC stats
-G6F[["percent.mt"]] <- PercentageFeatureSet(G6F, pattern = "^MT-")
+G6F[["percent.mt"]] <- PercentageFeatureSet(G6F, pattern = "^mt")
 # Visualize QC metrics as a violin plot
 VlnPlot(G6F, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
 # FeatureScatter is typically used to visualize feature-feature relationships, but can be used
