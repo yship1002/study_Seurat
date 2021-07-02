@@ -1,7 +1,7 @@
 library(dplyr)
 library(Seurat)
 library(patchwork)
-pdf("./1.pdf", height = 6000, width = 10000)
+pdf("./1.pdf", height = 600, width = 1000)
 # Load the PBMC dataset
 G6F.data <- Read10X(data.dir = "/lustre/project/wdeng7/jyang10/data/sampleG6F/outs/filtered_feature_bc_matrix")
 # Initialize the Seurat object with the raw (non-normalized data).
